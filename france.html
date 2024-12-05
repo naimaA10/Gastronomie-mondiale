@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>France</title>
+	<link id="theme" rel="stylesheet" href="style.css">
+    <link  rel="stylesheet" type="text/css" href="france.css">
+</head>
+<body > 
+    <div class="cursor"></div>
+	<nav> 
+    <!--Boîte à options déroulante (dropdown), inclu un SVG pour représenter l'icône de la boîte à options déroulante-->
+            <div class='dropdown'> 
+                <svg width="40" height="30">
+                    <rect x="5" y="2" rx="2" ry="2" width="50" height="5"/>
+                    <rect x="5" y="12" rx="2" ry="2" width="50" height="5"/>
+                    <rect x="5" y="22" rx="2" ry="2" width="50" height="5"/>
+                </svg> 
+            </div>
+
+            <!--Menu principal-->
+            <ul class='menu_list'>
+                <a href="pays.html"><li> Pays </li></a>
+                <a href="quiz.html"><li> Quiz </li></a>
+                <a href="contact.html"><li> Contact </li></a>
+                <a href="index.html"><li id="logo_acceuil">Acceuil</li></a> <!--Apparait à la place du logo lorsque la page est petite-->
+                <a href="index.html"><img src="img/logo.jpg" class="logo"></a>
+            </ul>
+        </nav> 
+
+    <!--Un peut d'histoire sur le pot au feu-->
+    </div>
+    <div class="gauche-droite">
+            <div class="container">
+                <img src="./img/Paris-Tour-Eiffel.jpg" alt="France" />
+                <div class="overlay">
+                    <h1>France</h1>
+                </div>
+        </div>
+    </div>    
+    <section>
+            <!-- Recette-->
+                <h2>Recette du pot au feu</h2>
+                <div class="center">
+                    <img src="./img/morceaux-pot-au-feu.jpg" alt="frpaf" > 
+                </div>
+                <h3>ÉTAPE 1</h3>
+                <p>Laver, éplucher tous les légumes, et les couper en morceaux assez gros.</p>
+                <h3>ÉTAPE 2</h3>
+                <p>Piquer l'oignon entier avec les clous de girofle.</p>
+                <h3>ÉTAPE 3</h3>
+                <p> Faire bouillir 3 litres d'eau, ajouter tous les légumes, puis le bouquet garni, l'ail, sel, poivre puis la viande.</p>
+                <h3>ÉTAPE 4</h3>
+                <p> Faire cuire le tout pendant environ 2 h 30-3 h, écumer de temps en temps.</p>
+                <h3>ÉTAPE 5</h3>
+                <p> 1 h avant la fin, ajouter les os à moelle, et mettre du gros sel aux extremités pour conserver la moelle.</p>
+                <h3>ÉTAPE 6</h3>
+                <p> Egoutter les légumes et la viande, et servir bien chaud avec de la moutarde.</p>
+                <h3>ÉTAPE 7</h3>
+    </section>
+
+    <section>
+        <div class="image">
+            <!--Calcul des ingrédients-->
+            <div class="image-container">
+                <h2>Calculateur d'ingrédients pour le pot au feu</h2>
+                <p>Entrez le nombre de personnes pour lesquelles vous souhaitez faire ce plat :</p>
+                <div class="calcul">
+                    <input type="number" id="nbPersonnes" >
+                    <button  class="btn-italie" onclick="calculerIngredients_paf()">Calculer</button>
+
+                </div>      
+            <div id="resultat"></div>    
+        </div>
+
+            <!--Photo du plat-->
+            <div class="image-container">
+                <img src="./img/pot-au-feu.jpg" alt="paf" style="display: block; margin: 0 auto;">
+            </div>
+        </div>
+    </section>
+    <!--évaluer et noter le plat-->
+    <section>
+
+    <form name='principal' action='formulaire_1.html' method='get'>
+
+    <!-- notation avec les étoiles-->
+        <div class="image-container"> 
+            <h2> Voulez vous ajouter un commentaire ?</h2>
+            <br>
+            <h3>Notez ce plat</h3>
+                <div class="note"> 
+                <input type="radio" name="starfr" id="star1" value="5" />
+                <label for="star1">&#9733;</label>
+                <input type="radio" name="starfr" id="star2" value="4" />
+                <label for="star2">&#9733;</label>
+                <input type="radio" name="starfr" id="star3" value="3" />
+                <label for="star3">&#9733;</label>
+                <input type="radio" name="starfr" id="star4" value="2" />
+                <label for="star4">&#9733;</label>
+                <input type="radio" name="starfr" id="star5" value="1" />
+                <label for="star5">&#9733;</label>
+                </div>
+        <!--Nom-->
+        <fieldset>
+            <label for="login">Votre pseudo:</label>
+            <input type='text' id='usr_login' name="usr_loginfr"/>
+        </fieldset>
+        
+        <!--Age-->
+        <fieldset>
+            <label for='age'>Votre age:</label>
+            <input type='number' id='user_age' name="user_agefr" min="0" max="120" required/>
+        </fieldset>
+
+        <!--Sexe-->
+        <fieldset>
+            <label>Votre Sexe:</label>
+            <input type="radio" id='male' name='user_sexfr' value='M'/>    
+            <label for="male">Homme </label>
+            <input type="radio" id='female' name='user_sexfr' value='F'/>
+            <label for="female">Femme </label>
+        </fieldset>
+
+        <!--Le commentaire de l'utilisateurs-->
+        <fieldset>
+            <label for="devise">Entrez votre commentaire:</label>
+            <p>
+                <textarea id='usr_devise' name='usr_devisefr' cols="40" rows='4' required>Ce plat à l'air bon!</textarea>
+            </p>
+        </fieldset>
+
+        <!--Envoyer et Reset-->
+        <p>
+            <input class="btn-france" type="button" value="Envoyer" onclick="printinfofr()"/> 
+            <input class="btn-france" type='reset'/>
+        </p>
+        </form>
+        </div>
+    </div>
+    </section>
+<!-- Les commentaires de tous les utilisateurs-->
+    <section class="product-com"> 
+        <h2 class="product-category-com">Commentaires de tous les utilisateurs</h2>
+        <button class="pre-btn-com"><img src="img/arrow.png" alt=""></button>
+        <button class="nxt-btn-com"><img src="img/arrow.png" alt=""></button>
+        <div class="product-container-com" id="liste_commentaire_fr">
+    </div>
+</div> 
+    </section>    
+
+    <!-- Redirection vers le Quizz-->
+    <div class="quiz-btns">
+        <h2>Teste tes connaissances avec le Quiz sur la France :</h2><br>
+        <a href="quiz.html#france"><button class="btn-quiz b1">Quizz France</button></a>
+    </div>
+
+
+    <!--Revenir au début de la page-->
+    <a href="#mode_checkbox"><button class="btn">Haut de la page</button></a>
+
+    <!--Pied de page-->
+    <footer>
+        <p>All right reserved @ AMMICHE Naïma et NOUALI Noura</p>
+    </footer>
+    
+    <!--script code.js contenant toutes les fonctions-->
+    <script src="code.js" defer></script>
+</body>
+</html>

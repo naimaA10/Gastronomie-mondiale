@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pays</title>
+	<link id="theme" rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <nav> 
+        <!--Boîte à options déroulante (dropdown), inclu un SVG pour représenter l'icône de la boîte à options déroulante-->
+        <div class='dropdown'> 
+            <svg width="60" height="50">
+                <rect x="5" y="2" rx="2" ry="2" width="50" height="5"/>
+                <rect x="5" y="12" rx="2" ry="2" width="50" height="5"/>
+                <rect x="5" y="22" rx="2" ry="2" width="50" height="5"/>
+            </svg> 
+        </div>
+
+        <!--Menu principal-->
+        <ul class='menu_list'>
+            <a href="pays.html"><li> Pays </li></a>
+            <a href="quiz.html"><li> Quiz </li></a>
+            <a href="contact.html"><li> Contact </li></a>
+            <a href="index.html"><li id="logo_acceuil">Acceuil</li></a> <!--Apparait à la place du logo lorsque la page est petite-->
+            <a href="index.html"><img src="img/logo.jpg" class="logo"></a>
+        </ul>
+    </nav> 
+
+    <!--Mode sombre ou jour-->
+    <label id="couleur-mode">
+			<input type="checkbox" id="mode_checkbox">
+			<span>Mode sombre</span>
+	</label>
+    
+    <h1 class="titre-noir">Clique sur le plat que tu souhaites découvrir</h1>
+        
+        <!-- Images des plats des différents pays avec le texte associé-->
+
+                <!--italie-->
+                <div class="gauche-droite"> <!-- animation-->
+                    <div class="image_texte">
+                        <a href="./italie.html"><img src="./img/italie.jpg" title="Clique et tu auras une recette de pizza"></a> <!--Commentaire qui apparait quand on passe le curseur sur l'image-->
+                        <h2>L'histoire de la pizza</h2>
+                        <p>La pizza est un plat italien traditionnel qui est devenu populaire dans le monde entier. L'histoire de la pizza remonte à l'Antiquité, où les Grecs et les Romains ont commencé à cuire du pain plat garni d'huile d'olive, d'herbes et de fromage. Cependant, ce n'est qu'au 18ème siècle que la pizza telle que nous la connaissons aujourd'hui a commencé à être préparée à Naples, en Italie. À l'origine, la pizza était considérée comme un plat de rue peu coûteux pour les travailleurs et les pauvres. Les ingrédients de base étaient de la pâte à pain, de la sauce tomate et du fromage, mais au fil du temps, de nombreuses variantes ont été créées, avec des ingrédients tels que les anchois, les champignons, les olives et les légumes. La popularité de la pizza a augmenté au 20ème siècle avec l'arrivée des pizzerias, qui ont commencé à ouvrir dans le monde entier. Aujourd'hui, la pizza est l'un des plats les plus populaires au monde, avec de nombreuses variations régionales et internationales.</p>
+                    </div>
+                </div>
+            
+            <!--France-->
+            <div class="gauche-droite"> 
+                    <div class="image_texte">
+                        <a href="./france.html"><img src="./img/france.jpg" title="Clique et tu auras une recette du pot au feu "></a> 
+                        <h2>L'histoire du pot-au-feu </h2>
+                        <p>L'histoire du pot-au-feu remonte à plusieurs siècles en France. Ce plat rustique, consistant en un bouillon de viande avec des légumes, était autrefois un repas commun pour les familles modestes. Les origines exactes du pot-au-feu sont incertaines, mais il est probable que ce plat ait évolué à partir de méthodes similaires de cuisson des viandes utilisées dans des plats comme le potage. Le pot-au-feu a également été popularisé pendant la Révolution française, lorsque la nourriture était rationnée et que les Français cherchaient des moyens économiques de nourrir leur famille.Le pot-au-feu est traditionnellement préparé avec un mélange de viande, de légumes et d'herbes. Les coupes de viande couramment utilisées comprennent du bœuf à braiser, du jarret, de la poitrine, de la queue et de l'os à moelle. Les légumes les plus couramment utilisés sont les carottes, les poireaux, les oignons et le céleri, mais d'autres légumes peuvent être ajoutés en fonction de la préférence du cuisinier. Les herbes aromatiques telles que le thym, le laurier et le persil sont également ajoutées pour rehausser la saveur du bouillon.Le pot-au-feu est généralement cuit lentement pendant plusieurs heures pour permettre aux saveurs de se mélanger et pour rendre la viande tendre et juteuse. Le plat est servi dans un grand bol avec le bouillon, les légumes et les morceaux de viande, accompagné de pain frais et de moutarde.</p>
+                    </div>
+            </div>
+
+            <!--Japon-->
+            <div class="gauche-droite"> 
+                    <div class="image_texte">
+                        <a href="./japon.html"><img src="./img/japon.jpg" title="Clique et tu auras une recette des sushis "></a> 
+                        <h2>L'histoire des Suchis</h2>
+                        <p>Les sushis sont une spécialité culinaire japonaise qui est devenue populaire dans le monde entier. La préparation des sushis remonte à plus de 1300 ans en arrière, à l'époque où le poisson était conservé dans du riz vinaigré fermenté appelé narezushi. Les Japonais ont développé une technique de fermentation qui permettait de conserver le poisson pendant des mois. Au moment de la consommation, le riz était jeté et seul le poisson était consommé. Au cours du temps, le narezushi a été remplacé par le shari, un riz vinaigré frais, et les sushis tels que nous les connaissons aujourd'hui ont commencé à apparaître. Les sushis étaient initialement vendus dans des stands de rue, mais au fil du temps, les restaurants de sushis se sont développés et sont devenus de plus en plus populaires. Le sushi a rapidement gagné en popularité à l'étranger dans les années 1980 et 1990, en particulier aux États-Unis et en Europe, où il est devenu un plat populaire dans les restaurants japonais. Aujourd'hui, les sushis sont disponibles dans le monde entier, avec des variations régionales en fonction des ingrédients et des techniques de préparation utilisées.</p>
+                    </div>
+            </div>
+                
+        
+    <!--Pied de page-->
+    <footer>
+        <p>All right reserved @ AMMICHE Naïma et NOUALI Noura</p>
+    </footer>
+    
+    <!--script code.js contenant toutes les fonctions-->
+    <script src="code.js" defer></script>
+    
+    </body>
+</html>

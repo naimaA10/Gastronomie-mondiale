@@ -1,0 +1,283 @@
+*{
+	margin: 0; padding: 0;
+	box-sizing: border-box;
+	text-decoration: none; /* enlève le souligner des liens <a>*/
+	outline: none; border: none;
+	transition: all .2s linear;
+	list-style-type: none; /* elever les puces de <ul>*/ 
+}
+
+*::selection{ /*lorsqu'on sélectionne un élement de la page*/
+	background-color: #ABEBC6;
+	color: #154360;
+}
+
+html{
+	font-size: 60%;
+	overflow-x: hidden;
+}
+
+section{
+	min-height:100vh;
+	padding:1rem;
+}
+
+body{
+	color: white;
+	background-color: #090927;
+	background-image: url("./img/cva.png");
+    background-size: cover; /*ou "contain" pour conserver les proportions*/
+    background-position: center center; /* ou "left top", "right bottom", etc.*/
+	overflow-x: hidden; /*masque le contenu horizontal qui dépasse les limites d'un élément, en cachant la partie qui déborde de la zone visible*/
+	padding-left: 35rem;
+}
+
+header{
+	position: fixed;
+	top: 0; left: 0;
+	z-index: 1000; /*placer élement au premier plan de la page, créer un menu déroulant qui s'affichent au dessus des autres éléments*/
+	height: 100%;
+	width: 35rem;
+	background-color: #090927;
+	display: flex;
+	align-items: center; /* Centre verticalement les élements dans leur conteneur*/
+	justify-content: center; /*centre horizontalement les élements dans leur conteneur*/
+	flex-flow: column;/*affiche les éléments dans une seule colonne*/
+	text-align: center;
+}
+
+header .user img{ /*photo de profil*/
+	height: 16rem;
+	width: 16rem;
+	border-radius: 50%; /*arrondir les coins de l'image*/
+	object-fit: cover;
+	margin-bottom: 1rem;
+	border: 0.4rem solid black;
+}
+
+header .user .name{ /*nom et prénom*/
+	font-size: 3rem;
+}
+
+header .user .profil{ /*post actuel*/
+	font-size: 2rem;
+}
+
+header .barre{ /*barre de navigation*/
+	width:100%;
+}
+
+header .barre ul{ /*<ul> de la barre de navigation*/
+	list-style: none;
+	padding:1rem 3rem;
+}
+
+header .barre ul li a{/*liste et lien de la barre de navigation*/
+	display: block;
+	padding: 1rem;
+	margin: 1.5rem 0;
+	background-color: white;
+	color: #000033;
+	font-size: 2rem;
+	border-radius: 5rem;
+}
+
+header .barre ul li a:hover{
+	background-color: #0099CC;
+}
+
+#menu{
+	position: fixed;
+	top: 3rem; right: 3rem;
+	background-color: white;
+	color: black;
+	cursor: pointer;
+	font-size: 3rem;
+	padding: 1rem 1.5rem;
+	z-index: 1000;
+	display: none;
+}
+
+.acceuil{
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	padding: 0 15rem;
+}
+
+.acceuil h1{
+	font-size: 4rem;
+}
+
+.acceuil p{
+	font-size: 2.4rem;
+}
+
+.btn{ /*bouton*/
+	padding:1rem 3rem;
+	background-color: #0099CC;
+	color: white;
+	cursor: pointer; /*curseur prendre forme d'une main*/
+	border-radius: 2rem;
+	font-size: 2rem;
+}
+
+.btn:hover{
+	background-color: #99FFFF;
+	color: black;
+}
+
+.ligne{
+	text-align: center;
+	margin:0 6rem;
+	font-size: 3rem;
+	padding: 1rem;
+	border-bottom: .1rem solid grey;
+	color: white;
+}
+
+.about .info{
+	flex: 1 1 48rem;
+	padding:2rem 1rem;
+	padding-left:6rem;
+	font-size: 3rem;
+}
+
+.about .info h3{
+	font-size: 4rem;
+	padding:3rem 2rem;
+	font-weight: normal;
+}
+
+.experience .nombre{
+	flex: 1 1 48rem;
+	padding:2rem 1rem;
+	padding-left:6rem;
+}
+
+.experience .nombre .box{
+	width: flex;
+	background-color: #030C46 ;
+	text-align: center;
+	padding:2rem;
+	margin:2rem;
+}
+
+.experience .nombre .box span{
+	font-size: 4rem;
+	color: #54B7EC;
+}
+
+.experience .nombre .box h3{
+	font-size: 4rem;
+}
+.experience .nombre .box p{
+	font-size: 3rem;
+}
+.experience .nombre .box h4{
+	font-size: 3rem;
+}
+
+.formation .box-container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;/*distribuer de manièere égale l'espace horizontal entre les element d'un conteneur et aligner le premier élément à Gauche et le dernier à Droite.*/
+	flex-wrap: wrap;
+	padding: 1rem 0;
+	padding-left: 3rem;
+}
+
+.formation .box-container .box{
+	width: 27rem;
+	margin: 4rem 1rem;
+	padding-left: 4rem;
+	border-left: .2rem solid white;
+	position: relative;
+}
+
+.formation .box-container .box span{
+	font-size: 2rem;
+	background-color: #051266 ;
+	border-radius: 5rem;
+	padding: 1rem 2.5rem;
+}
+
+.formation .box-container h3{
+	font-size: 3rem;
+	padding-top:1.5rem;
+}
+
+.loisirs .box{
+	width: flex;
+	background-color: #030C46 ;
+	text-align: center;
+	padding:2rem;
+	margin:2rem;
+}
+
+.loisirs .box span{
+	font-size: 4rem;
+	color: #54B7EC;
+}
+
+.loisirs .box h3{
+	font-size: 2rem;
+}
+
+.contact .ligne{
+	display: flex;
+	align-items: center;
+}
+/*Adaptable*/
+@media (max-width: 1300px){
+	html{
+		font-size: 50%;
+	}
+
+	.acceuil{
+		padding: 1rem 3rem;
+	}
+}
+
+@media (max-width: 990px){
+	header{/*enlève le menu de gauche*/
+		left:-120%;
+	}
+
+	#menu{/*affiche le menu en haut à droite*/
+		display: block;
+	}
+
+	#menu:hover +header{
+		left: 0%;
+	}	
+	/*à compléter lorsquon clique sur #menu*/
+
+	body{
+		padding: 0;
+	}
+
+}
+
+@media (max-width: 400px){
+	header{
+		width: 100vw; /*largeur  de 100% de la largeur de la fenêtre*/
+	}
+
+	.me{
+		margin: 0 3rem;
+	}
+
+	.experience .nombre .box{ /*à voir si on retire*/
+		width: 100%;
+	}
+
+	.formation .box-container .box{
+		width: 100%;
+	}
+
+	.loisirs .box{
+		width: 100%;
+	}
+}
+

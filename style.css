@@ -1,0 +1,623 @@
+*, ::before, ::after { /*Avant et après tout les élements*/
+    /*taille totale d'un élement HTML inclut la taille des bordures et du padding mais pas des marges*/
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #c6e4f0;
+    cursor: none;
+}
+
+h1{
+    color: white;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: Abril fatface, sans-serif;
+}
+
+section{
+    border: solid 1.5px black;
+    margin: 2rem;
+
+}
+
+section p{  
+    margin: 0.7rem;
+    font-size: 1.4rem;
+}
+
+h1 span {
+    position: relative;
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    font-family: Abril fatface, sans-serif;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: justify;
+}
+
+img{
+    height: 15rem;
+    width: 30rem;
+    margin-right: 1rem; /* Ajouter de la marge à droite de l'image */
+    z-index: 0;
+}
+
+img:hover{
+    border:solid 2px cyan;
+    transform: scale(1.1);/*zoom sur image*/
+    cursor: pointer;
+}
+
+nav {
+    position: sticky; /*élement reste fixe à une position données*/
+    top: 0px;
+    z-index: 1;
+}
+
+a {
+    color: black;
+    text-decoration:none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0rem;
+    left: 30%;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+fieldset{
+        border:0;
+}
+
+.page-accueil {
+    background: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background: url('img/platmonde.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+    cursor: default;
+}
+
+.container-first {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+
+/*Les images et textes présent dans 'pays.html'*/
+.image_texte{
+    height: 20em;
+    margin: 20px 0;
+}
+
+.image_texte img{
+    display: flex;
+    border-top-right-radius: 50%;
+    float: left;
+    margin-right: 2rem;
+    height: 18em;
+    width: 20em;
+}
+
+.image_texte p{
+    font-size: 1rem;
+}
+
+/*Les images et textes dans les sections, pays.html, italie.html, france.html et japon.html*/
+.image{
+    animation: apparition 4s forwards;
+    padding:1rem 2rem;
+    display: flex; /* aligner les images */
+    justify-content: space-between; /* Espacez les images de manière égale */
+}
+
+.image-container{
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.image-container h3{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.image-container label{ /*section commentaire*/
+    font-size: 1.3rem;
+}
+
+
+/*L'ensemble des boutons présent dans les pages autre que index.html*/
+.btn-italie { 
+    background: black;
+    font-size: 1.3rem;
+    padding: 1rem;
+    width: 10rem;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-italie:hover{
+    transition: all 0.3s ease-in-out;
+    background: #f1f1f1;
+    color: #333;
+}
+
+/*Boutons présent sur la page d'acceuil*/
+.container-bt {
+    position: relative;
+    top: 2rem;
+}
+
+.btn-first {
+    border: 2px solid #f1f1f1;
+    outline: none;
+    background: transparent;
+    font-size: 2rem;
+    padding: 1rem;
+    width: 15rem;
+    color: white;
+    cursor: pointer;
+}
+
+/*Ajoute la marge à droite au deux prémiers boutons*/
+.btn-first:nth-child(1){
+    margin-right: 3rem;
+}
+
+.btn-first:nth-child(2){
+    margin-right: 3rem;
+}
+
+/*Application de la transition et changement de style au survol des boutons de cette classe*/
+.btn-first:hover {
+    transition: all 0.3s ease-in-out; /*transition fluide de 0.3 second avec accélération et ralentissement progressifs*/
+    background: #f1f1f1;
+    color: #333;
+}
+
+/*Logo du site web présent en haut à droite de chauque page*/
+.logo {
+    position: absolute;
+    right: 2.9%;
+    top: 4%;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+/*Modifie le style de la police, taille, couleur des élements HTML de la classe titre-noir*/
+.titre-noir{
+    color: black;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: Abril fatface, sans-serif;
+}
+
+
+/*Curseur personalisé*/
+.cursor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none; /*désactive les intéractions de la souris avec l'élément auquel elle est appliquée*/
+}
+
+/*Forme de cercle centrée avec position et transform, au centre du curseur*/
+.cursor::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 15px;
+    height: 15px;
+    background: rgb(124, 124, 124);
+    border-radius: 50%;
+}
+
+/*Elément avec classe expend survolé induit Anim1 qui dure 0.5sseconde et modifie la couleur de fond*/
+.expand {
+    animation: Anim1 .5s;
+    background: rgb(78, 78, 78);
+}
+
+/*Boîte à options déroulante*/
+rect{
+    fill:black; /*couleur remplissage*/
+    stroke:black; /*couleur de contour de SVG*/
+    stroke-width:1; /*épaisseur de la ligne*/
+    opacity:1.0;
+}
+
+/*Menu principal*/
+.menu_list {
+    background-color: #F7F0E0  ;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.menu_list li {
+    margin: 0;
+    min-width: 10rem;
+    height: 5rem;
+    padding-top: 15px;
+    list-style-type: none;
+    text-align: center;
+    font-size: 2rem;
+    font-family:  Impact, Charcoal, sans-serif;
+    border-bottom: solid 1px black;
+
+}
+
+.menu_list li:hover {
+    background-color: rgb(0, 0, 0, 0.4);
+    border-bottom: solid 1px #F0F8FF;
+    transition-duration: 1s;
+
+}
+
+
+/* Dropdown Menu */
+.dropdown {
+    display: none;
+}
+
+/*Logo*/
+#logo_acceuil {
+    display: none;
+}
+
+.logo {
+    position: absolute;
+    right: 2.9%;
+    top: 4%;
+    width: 5rem;
+    height:5rem;
+    cursor: pointer;
+}
+
+/*Notation avec étoiles*/
+.note { 
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+
+.note input[type="radio"] {
+    display: none;
+}
+
+.note label {
+    font-size: 40px;
+    color: #BAC0C9 ;
+    cursor: pointer;
+}
+
+.note label:hover,
+.note input[type="radio"]:checked ~ label {
+    color: #ffdd00;
+}
+
+/*Commentaires des utilisateurs*/
+#list_commentaires{
+    border: 1px solid blue;
+    background-color: lightcyan;
+
+}
+
+input[type="radio"] {
+    margin-right: 10px; /*marge à 10px aux éléments de type radio dans formulaire*/
+}
+
+input[type="submit"] {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+    background-color: #428bca;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/*Dans quiz.html*/
+.result {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.result h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.result p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.border {
+    height: 15px;
+    width: 100%;
+    background: linear-gradient(to right, green, white, red);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.calcul{
+    text-align: center;
+}
+
+/*Dans contact.html*/
+.medias {
+    list-style-type: none;
+    position: absolute;
+    right: 45%;
+    top: 55%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0;
+    animation: apparition 1s forwards;
+}
+
+.bulle {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 100%; /*rond*/
+    outline: none;
+    display: flex;
+    border: dashed 2px black;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    background: #5C96EB  ;
+    cursor: pointer;
+    position: relative;
+    animation: apparition 1s forwards;
+}
+
+.bulle:hover{
+    background: #B1CFFA ;
+}
+
+/*Animation*/
+@keyframes apparition {
+    0% {
+    font-size: 0;
+    opacity: 0;
+    }
+    100% {
+    font-size: 1rem;
+    opacity: 1;
+    }
+}
+
+.backgroud-contact {
+    /*height: 100vh;*/
+    background: url(./img/contact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/*boutons de quiz.html*/
+.quiz-btns {
+    padding: 1rem;
+    margin: 3rem;
+    text-align: center;
+}
+.btn-quiz {
+    background: black;
+    font-size: 2rem;
+    padding: 1rem;
+    width: 15rem;
+    color: white;
+    cursor: pointer;
+}
+.btn-quiz:nth-child(1){
+    margin-right: 3rem;
+}
+
+.btn-quiz:nth-child(2){
+    margin-right: 3rem;
+}
+
+.btn-quiz:hover {
+    transition: all 0.3s ease-in-out;
+    background: #f1f1f1;
+    color: #333;
+}
+
+.gauche-droite {
+    margin: 2rem;
+    position: relative;
+    left: -100%;
+    animation: deplacement 2s forwards;
+}
+
+.gauche-droite:hover {
+    left: 0;
+}
+
+@keyframes deplacement {
+    0% {
+    left: -100%;
+    }
+    100% {
+    left: 0;
+    }
+}
+/*bouton "haut de la page"*/
+.btn { 
+    background: black;
+    font-size: 1.3rem;
+    width: 10rem;
+    height: 5rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Adaptable selon la taille de l'écran*/
+@media screen and (max-width: 1200px){
+    /*pays.html*/
+    .image_texte img{
+    height: 10rem;
+}
+.image_texte p{
+    font-size: 0.8rem;
+}
+img{
+    height: 11rem;
+    width: 15rem;
+}
+@media screen and (max-width: 630px){
+    .image-container img{
+        display: none;
+    }
+}
+
+}
+
+@media screen and (max-width: 600px){
+    /*pays.html*/
+    .image_texte img{
+    height: 6rem;
+
+}
+.image_texte h2{
+    font-size: 1rem;
+}
+
+}
+
+@media screen and (max-width: 500px) {
+
+    /*logo est enlever est remplacé par "acceuil"*/
+    #logo_acceuil{
+        display: block;
+    }
+
+    .logo{
+        display: none;
+    }
+
+
+
+    .menu_list li{
+        display: block;
+        position: absolute;
+        top: -48px;
+        transition: top 1s;
+        margin: 0 auto;
+
+    }
+
+    ul .menu_list{
+        height: 0;
+        width: 150px;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 1s;
+        flex-direction: column;
+        display: block;
+        left: 0;
+        right: 0;
+
+    }
+    .dropdown{
+        display: block;
+    }
+
+    .dropdown:hover{
+        position: relative;
+        top: -8px;
+        margin: 0;
+        min-width: 150px;
+        height: 40px;
+        padding-top: 15px;
+        list-style-type: none;
+        text-align: center;
+        font-family:  Impact, Charcoal, sans-serif;
+        border-bottom: solid 1px black;
+    }
+
+    nav:hover{
+        background-color: #D3F3E9;
+    }
+    
+    nav:hover ul{
+        top: 48px;
+        transition: opacity 1s;
+        opacity: 1;
+    }
+
+    nav:hover li{
+        max-width: 150px;
+        display: block;
+        margin: 0 auto;
+        background-color: #D3F3E9 ; /*inherit = tansparent*/
+        position: relative;
+        top: 0px;
+        transition: top 1s;
+        border: solid 0.2px black ;
+    }
+
+    .menu_list li:hover {
+        background-color: rgb(188,188,188, 1.0);
+        border-bottom: black;      
+    }
+
+        .image_texte img{
+    height: 3rem;
+
+}
+.image_texte p{
+    margin: 2rem;
+    font-size: 0.6rem;
+}
+
+
+.image_texte h2{
+    font-size: 0.8rem
+}
+}
+
+

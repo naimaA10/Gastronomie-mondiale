@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Quiz</title>
+	<link id="theme" rel="stylesheet" href="style.css">
+</head>
+<body> 
+  <div class="cursor"></div>
+	<nav> 
+          <!--Boîte à options déroulante (dropdown), inclu un SVG pour représenter l'icône de la boîte à options déroulante-->
+            <div class='dropdown'> 
+                <svg width="60" height="50">
+                    <rect x="5" y="2" rx="2" ry="2" width="50" height="5"/>
+                    <rect x="5" y="12" rx="2" ry="2" width="50" height="5"/>
+                    <rect x="5" y="22" rx="2" ry="2" width="50" height="5"/>
+                </svg> 
+            </div>
+
+            <!--Menu principal-->
+            <ul class='menu_list'>
+                <a href="pays.html"><li> Pays </li></a>
+                <a href="quiz.html"><li> Quiz </li></a>
+                <a href="contact.html"><li> Contact </li></a>
+                <a href="index.html"><img src="img/logo.jpg" class="logo"></a>
+            </ul>
+        </nav> 
+
+        <!--Mode sombre ou jour-->
+        <label>
+				<input type="checkbox" id="mode_checkbox">
+				<span>Mode sombre</span>
+		</label>
+    
+    <div class="gauche-droite">
+        <h1 class="titre-noir">Quiz</h1><br>
+        <h2>Choisi le pays pour lequel tu veux faire le quiz:</h2>
+
+        <!-- Liste permettant de joindre un section de la page-->
+        <div class="quiz-btns">
+                <a href="#italie"><button class="btn-quiz b1">Italie</button></a>
+                <a href="#japon"><button class="btn-quiz b2">Japon</button></a>
+                <a href="#france"><button class="btn-quiz b3">France</button></a>
+        </div>
+    </div>
+
+    <!--Italie-->
+    <section id="italie">
+        <h2>Quiz sur l'Italie</h2>
+        <form>
+        <p>1. Dans quelle ville italienne la pizza a-t-elle été créée ?</p>
+        <label><input type="radio" name="q1" value="a"> Rome</label>
+        <label><input type="radio" name="q1" value="b"> Florence</label>
+        <label><input type="radio" name="q1" value="c"> Naples</label>
+        
+        <p>2. Quel est l'ingrédient de base de la pizza Margherita ?</p>
+        <label><input type="radio" name="q2" value="a"> Sauce tomate</label>
+        <label><input type="radio" name="q2" value="b"> Fromage</label>
+        <label><input type="radio" name="q2" value="c"> Basilic</label>
+        
+        <p>3. Quel est le nom de la pizza avec des anchois, des câpres et des olives ?</p>
+        <label><input type="radio" name="q3" value="a"> Pizza Quattro Stagioni</label>
+        <label><input type="radio" name="q3" value="b"> Pizza Napoletana</label>
+        <label><input type="radio" name="q3" value="c"> Pizza alla Puttanesca</label>
+        
+        <input type="submit" value="Soumettre les réponses">
+      </form>
+      <div class="result" style="display:none;">
+        <h2>Résultats</h2>
+        <p>Vous avez répondu juste à <span id="score">0</span> question(s) sur 3.</p>
+        <p>Voici les bonnes réponses :</p>
+        <ol>
+          <li>La pizza a été créée à Naples.</li>
+          <li>L'ingrédient de base de la pizza Margherita est la sauce tomate.</li>
+          <li>Le nom de la pizza avec des anchois, des câpres et des olives est Pizza alla Puttanesca.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!--Japon-->
+    <section id="japon">
+      <h2>Quiz sur le Japon</h2>
+      <form id ='formjap'>
+      <p>1.Quelle est l'origine du narezushi ?</p>
+      <label><input type="radio" name="q1" value="a"> Japon</label>
+      <label><input type="radio" name="q1" value="b"> Chine</label>
+      <label><input type="radio" name="q1" value="c"> Corée</label>
+      
+      <p>2.Quel est l'ingrédient principal du shari</p>
+      <label><input type="radio" name="q2" value="a">  Riz vinaigré fermenté</label>
+      <label><input type="radio" name="q2" value="b"> Riz vinaigré frais</label>
+      <label><input type="radio" name="q2" value="c"> Riz cuit</label>
+      
+      <p>3. Les sushis sont devenus populaires dans les années :</p>
+      <label><input type="radio" name="q3" value="a"> 1920 et 1930</label>
+      <label><input type="radio" name="q3" value="b">  1950 et 1960</label>
+      <label><input type="radio" name="q3" value="c"> 1980 et 1990</label>
+      
+      <input type="submit" value="Soumettre les réponses">
+    </form >
+    <div class="result" style="display:none;">
+      <h2>Résultats</h2>
+      <p>Vous avez répondu juste à <span id="scorejap">0</span> question(s) sur 3.</p>
+      <p>Voici les bonnes réponses :</p>
+      <ol>
+        <li>Le narezushi est Japonais.</li>
+        <li>L'ingrédient principal du shari est le vinaigre frais</li>
+        <li>Les sushis sont devenu populaire entre les années 1980 et 1990</li>
+      </ol>
+    </div>
+  </section>
+
+    <!--France-->
+    <section id="france">
+      <h2>Quiz sur la France</h2>
+      <form id ='formfr'>
+      <p>1. Qu'est-ce que le pot-au-feu ?</p>
+      <label><input type="radio" name="q1" value="a"> Un plat de viande et de légumes cuit lentement dans un bouillon</label>
+      <label><input type="radio" name="q1" value="b"> Un ragoût de fruits de mer cuit lentement</label>
+      <label><input type="radio" name="q1" value="c"> Une salade de légumes crus</label>
+      
+      <p>2. Quelles sont les coupes de viande couramment utilisées dans le pot-au-feu ?</p>
+      <label><input type="radio" name="q2" value="a"> Du poulet et du porc</label>
+      <label><input type="radio" name="q2" value="b"> Du bœuf à braiser, du jarret, de la poitrine, de la queue et de l'os à moelle</label>
+      <label><input type="radio" name="q2" value="c">  Du veau et de l'agneau</label>
+      
+      <p>3. Quels sont les légumes les plus couramment utilisés dans le pot-au-feu ?</p>
+      <label><input type="radio" name="q3" value="a"> Des pommes de terre et des carottes</label>
+      <label><input type="radio" name="q3" value="b">  Des carottes, des poireaux, des oignons et du céleri</label>
+      <label><input type="radio" name="q3" value="c"> Des épinards et des champignons</label>
+      
+      <input type="submit" value="Soumettre les réponses">
+    </form >
+    <div class="result" style="display:none;">
+      <h2>Résultats</h2>
+      <p>Vous avez répondu juste à <span id="scorefr">0</span> question(s) sur 3.</p>
+      <p>Voici les bonnes réponses :</p>
+      <ol>
+        <li> C'est un plat de viande et de légumes cuit lentement dans un bouillon</li>
+        <li>Du bœuf à braiser, du jarret, de la poitrine, de la queue et de l'os à moelle</li>
+        <li> Des carottes, des poireaux, des oignons et du céleri</li>
+      </ol>
+    </div>
+  </section>
+
+  <!--Pied de page-->
+  <footer>
+    <p>All right reserved @ AMMICHE Naïma et NOUALI Noura</p>
+  </footer>
+  
+  <!--script code.js contenant toutes les fonctions-->
+  <script src="code.js" defer></script>
+
+  </body>
+</html>

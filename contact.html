@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>Curriculum Vitae</title>
+    	<link id="theme" rel="stylesheet" href="style.css">
+    </head>
+    <body> 
+        <div class="cursor"></div>
+    	<nav> 
+            <!--Boîte à options déroulante (dropdown), inclu un SVG pour représenter l'icône de la boîte à options déroulante-->
+                <div class='dropdown'> 
+                    <svg width="60" height="50">
+                        <rect x="5" y="2" rx="2" ry="2" width="50" height="5"/>
+                        <rect x="5" y="12" rx="2" ry="2" width="50" height="5"/>
+                        <rect x="5" y="22" rx="2" ry="2" width="50" height="5"/>
+                    </svg> 
+                </div>
+
+                <!--Menu principal-->
+                <ul class='menu_list'>
+                    <a href="pays.html"><li> Pays </li></a>
+                    <a href="quiz.html"><li> Quiz </li></a>
+                    <a href="contact.html"><li> Contact </li></a>
+                    <a href="index.html"><li id="logo_acceuil">Acceuil</li></a> <!--Apparait à la place du logo lorsque la page est petite-->
+                    <a href="index.html"><img src="img/logo.jpg" class="logo"></a>
+                </ul>
+            </nav>
+
+            <!--Mode sombre ou jour--> 
+            <label id="couleur-mode">
+    				<input type="checkbox" id="mode_checkbox">
+    				<span>Mode sombre</span>
+    		</label>
+
+        <br><br><h1 class="titre-noir">Curriculum Vitae</h1>
+
+    <ul class="medias">
+        <a href="naima.html" target="_blank"><li class="bulle">Naïma AMMICHE</li></a>
+        <a href="noura.html" target="_blank"><li class="bulle">Noura NOUALI</li></a>
+    </ul> 
+
+
+        
+        <!--Pied de page-->
+        <footer>
+            <p>All right reserved @ AMMICHE Naïma et NOUALI Noura</p>
+        </footer>
+        
+        <!--script code.js contenant toutes les fonctions-->
+        <script src="code.js" defer></script>
+    
+    </body>
+</html>

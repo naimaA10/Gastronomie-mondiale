@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Japon</title>
+	<link id="theme" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="japon.css">
+</head>
+<body> 
+    <div class="cursor"></div>
+	<nav> 
+    <!--Boîte à options déroulante (dropdown), inclu un SVG pour représenter l'icône de la boîte à options déroulante-->
+            <div class='dropdown'> 
+                <svg width="40" height="30">
+                    <rect x="5" y="2" rx="2" ry="2" width="50" height="5"/>
+                    <rect x="5" y="12" rx="2" ry="2" width="50" height="5"/>
+                    <rect x="5" y="22" rx="2" ry="2" width="50" height="5"/>
+                </svg> 
+            </div>
+
+            <!--Menu principal-->
+            <ul class='menu_list'>
+                <a href="pays.html"><li> Pays </li></a>
+                <a href="quiz.html"><li> Quiz </li></a>
+                <a href="contact.html"><li> Contact </li></a>
+                <a href="index.html"><li id="logo_acceuil">Acceuil</li></a> <!--Apparait à la place du logo lorsque la page est petite-->
+                <a href="index.html"><img src="img/logo.jpg" class="logo"></a>
+            </ul>
+        </nav> 
+
+    <!--Un peut d'histoire sur les suchis. Japon-->
+    </div>
+    <div class="gauche-droite">
+        <br>
+        <br>
+        <div class="center">   
+                <div class="sign">
+                    <span class="fast-flicker">J</span>ap<span class="flicker">o</span>n
+                </div>
+        </div>
+        <br>
+        <br>
+    </div>    
+    <section>
+            <!-- Recette-->
+                <h2>Recette sushi californien</h2>
+                <div class="center">
+                    <img src="./img/caliroll.jpg" alt="californiaroll" > 
+                </div>
+                <h3>ÉTAPE 1</h3>
+                <p>Rincer le riz à l'eau froide jusqu'à ce que l'eau qui s'écoule soit claire. Laisser égoutter.</p>
+                <h3>ÉTAPE 2</h3>
+                <p>Faire cuire le riz dans 15 cl d'eau : porter à ébullition 2 minutes et laisser gonfler 10 minutes à petit feu couvert. Laisser refroidir.</p>
+                <h3>ÉTAPE 3</h3>
+                <p>Faire bouillir le vinaigre de riz avec le sucre et le sel. Laisser refroidir. Incorporer l'assaisonnement au riz</p>
+                <h3>ÉTAPE 4</h3>
+                <p>Emincer en fines et longues lamelles le concombre et l'avocat.</p>
+                <h3>ÉTAPE 5</h3>
+                <p>Etaler 1 cm de riz sur chacune des feuilles de nori et soupoudrer de graines de sésame.</p>
+                <h3>ÉTAPE 6</h3>
+                <p>Retourner la feuille de nori (pour que le riz se retrouve à l'extérieur du rouleau) et étaler un peu wasabi.</p>
+                <h3>ÉTAPE 7</h3>
+                <p>Garnir avec le concombre, l'avocat et le crabe, puis rouler pour former le rouleau (plus facile si vous poséder un makisu : natte de bambou à rouler).</p>
+                <h3>ÉTAPE 8</h3>
+                <p>Couper chaque rouleau en 8.</p>
+    </section>
+
+    <section>
+        <div class="image">
+            <!--Calcul des ingrédients-->
+            <div class="image-container">
+                <h2>Calculateur d'ingrédients pour les sushis californiens</h2>
+                <p>Entrez le nombre de personnes pour lesquelles vous souhaitez faire des sushis :</p>
+                <div class="calcul">
+                    <input type="number" id="nbPersonnes" >
+                    <button  class="btn-italie" onclick="calculerIngredients_sushis()">Calculer</button>
+                </div>      
+            <div id="resultat"></div>    
+        </div>
+
+            <!--Photo du plat-->
+            <div class="image-container">
+                <img src="./img/california-roll.jpg" alt="sushi" style="display: block; margin: 0 auto;">
+            </div>
+        </div>
+    </section>
+<!--évaluer et noter le plat-->
+<section>
+
+        <form name='principal' action='formulaire_1.html' method='get'>
+
+    
+
+        <!-- commentaire -->
+        <div class="image-container"> 
+        <h2> Voulez vous ajouter un commentaire ?</h2>
+        <br>
+        <h3>Notez ce plat</h3>
+            <div class="note"> 
+                <input type="radio" name="starjp" id="star1" value="5" />
+                <label for="star1">&#9733;</label>
+                <input type="radio" name="starjp" id="star2" value="4" />
+                <label for="star2">&#9733;</label>
+                <input type="radio" name="starjp" id="star3" value="3" />
+                <label for="star3">&#9733;</label>
+                <input type="radio" name="starjp" id="star4" value="2" />
+                <label for="star4">&#9733;</label>
+                <input type="radio" name="starjp" id="star5" value="1" />
+                <label for="star5">&#9733;</label>
+            </div>
+        <!--Nom-->
+        <fieldset>
+            <label for="login">Votre pseudo:</label>
+            <input type='text' id='usr_login' name="usr_loginjp"/>
+        </fieldset>
+        
+        <!--Age-->
+        <fieldset>
+            <label for='age'>Votre age:</label>
+            <input type='number' id='user_age' name="user_agejp" min="0" max="120" required/>
+        </fieldset>
+
+        <!--Sexe-->
+        <fieldset>
+            <label>Votre Sexe:</label>
+            <input type="radio" id='male' name='user_sexjp' value='M'/>    
+            <label for="male">Homme </label>
+            <input type="radio" id='female' name='user_sexjp' value='F'/>
+            <label for="female">Femme </label>
+        </fieldset>
+
+        <!--Le commentaire de l'utilisateurs-->
+        <fieldset>
+            <label for="devise">Entrez votre commentaire:</label>
+            <p>
+            <textarea id='usr_devise' name='usr_devisejp' cols="40" rows='4' required>Ce plat à l'air bon!</textarea>
+            </p>
+        </fieldset>
+
+        <!--Envoyer et Reset-->
+        <p>
+            <input class="btn-italie" type="button" value="Envoyer" onclick="printinfojp()"/> 
+            <input class="btn-italie" type='reset'/>
+        </p>
+        </form>
+    </div>
+</div>
+    </section>
+
+    <!-- Les commentaires de tous les utilisateurs-->
+    <section class="product-com"> 
+        <h2 class="product-category-com">Commentaires de tous les utilisateurs</h2>
+        <button class="pre-btn-com"><img src="img/arrow.png" alt=""></button>
+        <button class="nxt-btn-com"><img src="img/arrow.png" alt=""></button>
+        <div class="product-container-com" id="liste_commentaire_jp">
+        </div>
+    </div>
+    </section> 
+
+    <!-- Redirection vers le Quizz-->
+    <div class="quiz-btns">
+        <h2>Teste tes connaissances avec le Quiz sur le Japon :</h2><br>
+        <a href="quiz.html#japon"><button class="btn-quiz b1">Quizz Japon</button></a>
+    </div>
+
+
+    <!--Revenir au début de la page-->
+    <a href="#mode_checkbox"><button class="btn">Haut de la page</button></a>
+
+    <!--Pied de page-->
+    <footer>
+        <p>All right reserved @ AMMICHE Naïma et NOUALI Noura</p>
+    </footer>
+    
+    <!--script code.js contenant toutes les fonctions-->
+    <script src="code.js" defer></script>
+</body>
+</html>
